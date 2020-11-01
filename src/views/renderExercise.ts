@@ -21,7 +21,7 @@ export default (exerciseName?: string, filter?: ExerciseFilter) => {
     .compound()
     .add(
       ax
-        .run()
+        .custom()
         .executor(async (c: AlexaDialogContext, e: AlexaEvent) => {
           const exerciseDao = new ExerciseDao();
           let exercise: Exercise | undefined;

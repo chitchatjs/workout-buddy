@@ -8,7 +8,6 @@ import {
   AlexaEvent,
   ssml,
 } from "@chitchatjs/alexa";
-import { DoBlock } from "@chitchatjs/core";
 import { ui } from "ask-sdk-model";
 import { session } from "@chitchatjs/plugin-ax-session";
 
@@ -23,9 +22,9 @@ export namespace bbs {
     export const value = (
       slotName: string,
       callback: (value: string | undefined) => AlexaBlock
-    ): DoBlock<AlexaBuilderContext, AlexaDialogContext, AlexaEvent> => {
+    ) => {
       return ax
-        .run()
+        .custom()
         .executor((c: AlexaDialogContext, e: AlexaEvent) => {
           let requestType = e.currentRequest.request.type;
           if (requestType === "IntentRequest") {
@@ -43,9 +42,9 @@ export namespace bbs {
     export const values = (
       slotNames: string[],
       callback: (values: { [name: string]: string }) => AlexaBlock
-    ): DoBlock<AlexaBuilderContext, AlexaDialogContext, AlexaEvent> => {
+    ) => {
       return ax
-        .run()
+        .custom()
         .executor((c: AlexaDialogContext, e: AlexaEvent) => {
           let requestType = e.currentRequest.request.type;
           if (requestType === "IntentRequest") {
@@ -70,9 +69,9 @@ export namespace bbs {
     export const resolvedValues = (
       slotName: string,
       callback: (resolvedValues: string[]) => AlexaBlock
-    ): DoBlock<AlexaBuilderContext, AlexaDialogContext, AlexaEvent> => {
+    ) => {
       return ax
-        .run()
+        .custom()
         .executor((c: AlexaDialogContext, e: AlexaEvent) => {
           let requestType = e.currentRequest.request.type;
           if (requestType === "IntentRequest") {
@@ -114,7 +113,7 @@ export namespace bbs {
       .add(blockToRepeat)
       .add(
         ax
-          .run()
+          .custom()
           .executor((c: AlexaDialogContext, e: AlexaEvent) => {
             if (c.currentResponse.response.outputSpeech?.type === "SSML") {
               let ssml: ui.SsmlOutputSpeech = c.currentResponse.response.outputSpeech;
@@ -136,7 +135,7 @@ export namespace bbs {
       .whenIntentName("AMAZON.RepeatIntent")
       .then(
         ax
-          .run()
+          .custom()
           .executor((c: AlexaDialogContext, e: AlexaEvent) => {
             let attr = e.currentRequest.session?.attributes;
             if (attr && attr[REPEATABLE_PHRASE_KEY]) {

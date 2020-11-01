@@ -18,31 +18,31 @@
   "author": "Kevindra Singh (kevindra.singh@gmail.com)",
   "license": "ISC",
   "dependencies": {
-    "@chitchatjs/alexa": "^0.3.10",
-    "@chitchatjs/core": "^0.3.5",
-    "@chitchatjs/plugin-ax-common": "^0.2.5",
-    "@chitchatjs/plugin-ax-display": "0.0.5",
-    "@chitchatjs/plugin-ax-kit": "^0.1.5",
-    "@chitchatjs/plugin-ax-session": "^0.2.4",
-    "ask-sdk-model": "^1.33.1",
-    "ask-smapi-model": "^1.13.0",
+    "@chitchatjs/alexa": "^0.3.12",
+    "@chitchatjs/core": "^0.3.7",
+    "@chitchatjs/plugin-ax-common": "^0.2.7",
+    "@chitchatjs/plugin-ax-display": "0.0.7",
+    "@chitchatjs/plugin-ax-kit": "^0.1.8",
+    "@chitchatjs/plugin-ax-session": "^0.2.6",
+    "ask-sdk-model": "^1.34.0",
+    "ask-smapi-model": "^1.14.0",
     "lodash": "^4.17.20",
     "mustache": "^4.0.1",
     "string-similarity": "^4.0.2"
   },
   "devDependencies": {
-    "@types/chai": "^4.2.13",
-    "@types/lodash": "^4.14.163",
+    "@types/chai": "^4.2.14",
+    "@types/lodash": "^4.14.164",
     "@types/mocha": "^8.0.3",
     "@types/mustache": "^4.0.1",
     "@types/string-similarity": "^3.0.0",
     "ask-sdk-test": "^2.5.0",
     "chai": "^4.2.0",
-    "mocha": "^8.1.3",
+    "mocha": "^8.2.0",
     "nyc": "^15.1.0",
     "source-map-support": "^0.5.19",
     "ts-node": "^9.0.0",
     "tslint": "^6.1.3",
-    "typescript": "^3.7.5"
+    "typescript": "^3.9.7"
   }
 }

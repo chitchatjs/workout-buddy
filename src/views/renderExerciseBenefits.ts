@@ -22,7 +22,7 @@ export default ax
   )
   .add(
     ax
-      .run()
+      .custom()
       .executor((c: AlexaDialogContext, e: AlexaEvent) => {
         let exercise: Exercise = c.platformState.globalState["exercise"];
 

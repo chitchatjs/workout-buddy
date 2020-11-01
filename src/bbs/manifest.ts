@@ -23,7 +23,6 @@ export namespace publish {
         manifestEnvelope.manifest.privacyAndCompliance = privacyAndCompliance;
 
         c.resources.resourceMap["/skill.json"] = JSON.stringify(manifestEnvelope);
-        return c.resources;
       })
       .build();
   };
@@ -55,7 +54,6 @@ export namespace publish {
         publishInfo.distributionCountries = input.distributionCountries;
 
         c.resources.resourceMap["/skill.json"] = JSON.stringify(manifestEnvelope);
-        return c.resources;
       })
       .build();
   };
